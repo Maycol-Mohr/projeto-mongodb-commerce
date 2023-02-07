@@ -17,7 +17,7 @@ db.produtos.updateOne(
 db.produtos.updateMany(
     {
       tags: { $elemMatch: { $eq: "bovino" },
-    }},
+    } },
     {
       $inc: { "vendasPorDia.6": 120 },
     },
@@ -25,5 +25,5 @@ db.produtos.updateMany(
 
 db.produtos.find(
     {},
-    { nome: 1, vendasPorDia: 1, _id: 0 }
+    { nome: 1, vendasPorDia: 1, _id: 0 },
 );
